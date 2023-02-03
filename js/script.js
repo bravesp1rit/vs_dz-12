@@ -18,10 +18,10 @@ if (Number.isNaN(userCity) || userCity == null){
 let userCityResult = null;
 if (userCity == 'Киев'){
     userCityResult = 'Ты живешь в столице Украины';
-} else if (userCity == 'Москва'){
-    userCityResult = 'Ты живешь в столице России';
-} else if (userCity == 'Минск'){
-    userCityResult = 'Ты живешь в столице Беларуси';
+} else if (userCity == 'Берлин'){
+    userCityResult = 'Ты живешь в столице Германии';
+} else if (userCity == 'Париж'){
+    userCityResult = 'Ты живешь в столице Франции';
 } else {
     userCityResult = `Ты живешь в городе ${userCity}`;
 }
@@ -36,7 +36,6 @@ if (userFavouriteSport == 'Футбол'){
 } else {
     userFavouriteSportResult = 'Интересно! Не слышал о таком виде спорта';
 }
-
 
 if (Number.isNaN(userFavouriteSport) || userFavouriteSport == null){
     alert('Жаль, что Вы не захотели ввести свой любимый спорт');
