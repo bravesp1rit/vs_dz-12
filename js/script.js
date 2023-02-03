@@ -1,17 +1,15 @@
 'use strict';
 
-const userYearOfBirth = +prompt('Введи свой год рождения:', '');
+const userYearOfBirth = prompt('Введи свой год рождения:', '');
 
-if (Number.isNaN(userYearOfBirth) || userYearOfBirth == 0){
+if (userYearOfBirth == null || !isNaN(+userYearOfBirth)){
     alert('Жаль, что Вы не захотели ввести свой год рождения');
 }
 let userAge = new Date().getFullYear() - userYearOfBirth;
-if (userYearOfBirth == 0){
-    userAge = 'не указан';
-}
+
 const userCity = prompt('Введи город в котором ты живешь:', '');
 
-if (Number.isNaN(userCity) || userCity == null){
+if (userCity == null){
     alert('Жаль, что Вы не захотели ввести свой город');
 }
 
@@ -22,6 +20,8 @@ if (userCity == 'Киев'){
     userCityResult = 'Ты живешь в столице Германии';
 } else if (userCity == 'Париж'){
     userCityResult = 'Ты живешь в столице Франции';
+} else if (userCity == ''){
+    userCityResult = 'Где ты вообще живёшь';
 } else {
     userCityResult = `Ты живешь в городе ${userCity}`;
 }
